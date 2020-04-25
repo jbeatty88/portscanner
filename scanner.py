@@ -18,7 +18,7 @@ print("-" * 50)
 
 
 try:  # Try to walk through all of these ports and search for an open port to connect to
-    for port in range(50, 85):  # Limited ports, not even close to all of the ports availabel
+    for port in range(1, 65535):  # TODO: Thread
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # IPv4 TCP
         socket.setdefaulttimeout(1)  # Default timeout of 1 second
         result = s.connect_ex((target, port))  # Attempt to connect with remote host or error
